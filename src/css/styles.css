@@ -30,6 +30,7 @@ body {
     font-weight: 900;
     letter-spacing: 2px;
     gap: 24px;
+    height: 110px;
 }
 
 .pages > ul {
@@ -41,22 +42,53 @@ body {
 
 .page-content {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     width: 60%;
     background-color: rgba(70, 52, 46, 0.897);
     color: rgb(212, 212, 212);
     letter-spacing: 2px;
     padding: 24px;
     justify-items: center;
+    align-items: center;
 }
 
 .page-content > div {
-    width: 80%;
+    width: 60%;
     justify-items: center;
+    display: grid;
+    grid-template-rows: auto 280px auto 256px;
+    gap: 8px;
 }
 
+.page-content > div > div:first-child {
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+.page-content > div > div:nth-child(3) {
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+.page-content > div > div:nth-child(4) > h3 {
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
 .page-content > div > div {
     display: grid;
     line-height: 24px;
+}
+
+.page-content > div > div > h2, h3 {
+    letter-spacing: normal;
+}
+
+.page-content > div > div > h2, p{
+    letter-spacing: normal;
+    margin: 32px;
+}
+
+.page-content > div > div > img {
+    min-width: none;
+    max-width: 420px;
+    min-height: none;
+    max-width: auto;
+    border: 4px solid rgb(211, 168, 168);
+    border-radius: 4px;
 }
 
