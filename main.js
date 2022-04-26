@@ -16,17 +16,17 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_scripts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/scripts */ \"./src/js/scripts.js\");\n\n\nconsole.log((0,_js_scripts__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\n\n//# sourceURL=webpack://odin-restaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/home */ \"./src/js/home.js\");\n\n\nconsole.log((0,_js_home__WEBPACK_IMPORTED_MODULE_0__.test)());\n(0,_js_home__WEBPACK_IMPORTED_MODULE_0__.homePage)(document.querySelector('.container'));\n\n//# sourceURL=webpack://odin-restaurant/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/js/scripts.js":
-/*!***************************!*\
-  !*** ./src/js/scripts.js ***!
-  \***************************/
+/***/ "./src/js/home.js":
+/*!************************!*\
+  !*** ./src/js/home.js ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction test(){\n    return (\"It's worki~ng! I've been imported from scripts.js!\");\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (test);\n\n//# sourceURL=webpack://odin-restaurant/./src/js/scripts.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"homePage\": () => (/* binding */ homePage),\n/* harmony export */   \"makeElement\": () => (/* binding */ makeElement),\n/* harmony export */   \"test\": () => (/* binding */ test)\n/* harmony export */ });\nfunction test(){\n    return (\"It's worki~ng! I've been imported from scripts.js!\");\n}\n\n\n\nfunction makeElement(elementType = 'div', className = ''){\n    let temp = document.createElement(elementType);\n    if (className!=''){\n        temp.classList.add(className);\n    }\n    return temp;\n}\n\n\nfunction homePage(element){\n    let head = makeElement('div', 'header');\n    let logo = makeElement('div', 'logo');\n    let h1 = makeElement('h1');\n    h1.textContent = \"RESTAURANT\";\n    head.appendChild(logo);\n    logo.appendChild(h1);\n\n    let pages = makeElement('div', 'pages');\n    let ul = makeElement('ul');\n    let li1 = makeElement('li');\n    li1.textContent = 'HOME';\n    let li2 = makeElement('li');\n    li2.textContent = 'MENU';\n    let li3 = makeElement('li');\n    li3.textContent = 'CONTACT';\n\n    head.appendChild(pages);\n    pages.appendChild(ul);\n    ul.appendChild(li1);\n    ul.appendChild(li2);\n    ul.appendChild(li3);\n\n    element.appendChild(head);\n}\n\n// .header >\n//     .logo > h1 \"RESTAURANT\"\n//     .pages > ul > li \"HOME\", \"MENU\", \"CONTACT\"\n\n// .display >\n//     .page-content > div >\n//                         div > h2 \"THE BEST FRIED CHICKEN YOU'LL EVER TASTE\"\n//                         div > img\n//                         div > h6 \"MEAT PROCURED FROM THE FREE RANGE CHICKENS\"\n//                         div > h3 \"ABOUT US\"\n//                               p \"lorem ipsum\"\n    \n\n//# sourceURL=webpack://odin-restaurant/./src/js/home.js?");
 
 /***/ })
 
