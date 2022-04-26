@@ -18,34 +18,10 @@ function quickAppend(appendWhere, appendWhat){
 
 
 function homePage(element){
-    let head = makeElement('div', 'header');
-    let logo = makeElement('div', 'logo');
-    let h1 = makeElement('h1');
-    h1.textContent = "RESTAURANT";
-    quickAppend(head, logo);
-    quickAppend(logo, h1);
 
-    let pages = makeElement('div', 'pages');
-    let ul = makeElement('ul');
-    let li1 = makeElement('li');
-    li1.textContent = 'HOME';
-    let li2 = makeElement('li');
-    li2.textContent = 'MENU';
-    let li3 = makeElement('li');
-    li3.textContent = 'CONTACT';
-
-    quickAppend(head, pages);
-    quickAppend(pages, ul);
-    quickAppend(ul, li1);
-    quickAppend(ul, li2);
-    quickAppend(ul, li3);
-
-    let display = makeElement('div', 'display');
-    let pageContent = makeElement('div', 'page-content');
     let div0 = makeElement();
 
-    quickAppend(display, pageContent);
-    quickAppend(pageContent, div0);
+    quickAppend(document.querySelector('.page-content'), div0);
 
     let div1 = makeElement();
     let h2 = makeElement('h2');
@@ -79,15 +55,12 @@ function homePage(element){
     let a = makeElement('a');
     a.href = "https://github.com/ihascats";
     a.textContent = 'IHASCATS';
-    quickAppend(pageContent, footer);
+    quickAppend(document.querySelector('.page-content'), footer);
     quickAppend(footer, a);
 
-
-
-    quickAppend(element, head);
-    quickAppend(element, display);
+    quickAppend(element, document.querySelector('.display'));
 }
-export {test, homePage, makeElement};
+export {test, homePage, makeElement, quickAppend};
 // .header >
 //     .logo > h1 "RESTAURANT"
 //     .pages > ul > li "HOME", "MENU", "CONTACT"
