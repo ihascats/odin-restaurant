@@ -1,6 +1,7 @@
 import { test, homePage, makeElement, quickAppend } from "./js/home";
 import layout from "./js/permLayout";
 import menuPage from "./js/menu";
+import styles from "./css/menu.css"
 
 const container = document.querySelector('.container');
 layout(container);
@@ -15,10 +16,11 @@ ul.addEventListener('click', function(event){
     }
     if (li.textContent.toLowerCase() == 'home'){
         homePage(document.querySelector('.container'));
+        styles.unuse();
     }
     if (li.textContent.toLowerCase() == 'menu'){
         menuPage(document.querySelector('.page-content'));
-        require("./css/menu.css");
+        styles.use();
     }
 
 });
