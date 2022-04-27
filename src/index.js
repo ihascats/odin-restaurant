@@ -6,7 +6,7 @@ import styles from "./css/menu.css"
 const container = document.querySelector('.container');
 layout(container);
 const pageItems = document.querySelector('.page-content');
-
+let check = true;
 let ul = document.querySelector('ul');
 ul.addEventListener('click', function(event){
     let li = event.target
@@ -17,10 +17,14 @@ ul.addEventListener('click', function(event){
     if (li.textContent.toLowerCase() == 'home'){
         homePage(document.querySelector('.container'));
         styles.unuse();
+        check = true;
     }
     if (li.textContent.toLowerCase() == 'menu'){
         menuPage(document.querySelector('.page-content'));
-        styles.use();
+        if (check){
+            styles.use();
+            check = false;
+        }
     }
 
 });
