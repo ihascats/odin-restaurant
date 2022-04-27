@@ -2,9 +2,10 @@ import { homePage } from "./js/home";
 import layout from "./js/permLayout";
 import menuPage from "./js/menu";
 import contact from "./js/contact";
+import style from "./css/styles.css";
 import styles from "./css/menu.css"
 
-
+style.use();
 const container = document.querySelector('.container');
 layout(container);
 const pageItems = document.querySelector('.page-content');
