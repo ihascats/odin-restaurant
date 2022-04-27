@@ -1,4 +1,4 @@
-import { test, homePage, makeElement, quickAppend } from "./js/home";
+import { homePage } from "./js/home";
 import layout from "./js/permLayout";
 import menuPage from "./js/menu";
 import contact from "./js/contact";
@@ -39,5 +39,3 @@ ul.addEventListener('click', function(event){
     }
 
 });
-
-console.log(test());

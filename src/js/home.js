@@ -1,9 +1,3 @@
-function test(){
-    return ("It's worki~ng! I've been imported from scripts.js!");
-}
-
-
-
 function makeElement(elementType = 'div', className = ''){
     let temp = document.createElement(elementType);
     if (className!=''){
@@ -60,7 +54,7 @@ function homePage(element){
 
     quickAppend(element, document.querySelector('.display'));
 }
-export {test, homePage, makeElement, quickAppend};
+export {homePage, makeElement, quickAppend};
 // .header >
 //     .logo > h1 "RESTAURANT"
 //     .pages > ul > li "HOME", "MENU", "CONTACT"
